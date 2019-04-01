@@ -1,0 +1,5 @@
+imageio
+numpy
+Pillow
+tensorflow>=1.12.0
+tqdm

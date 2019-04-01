@@ -1,0 +1,6 @@
+DATA_ROOT = 'data'
+OUT_DIR = 'out'
+WIDTH = 32
+EPOCHS = 100
+EPOCHS_TO_SAVE = 0  # auto
+BATCH_SIZE = 32
