@@ -67,6 +67,11 @@ saving progress at an unreasonable frequency. However, if you want to customize
 the threshold, you can pass the number of epochs that must pass before saving 
 progress with `--epochs-to-save`.
 
+### Learning Rate
+The learning rate for the discriminator and generator can be changed by using
+the `--d-learn-rate` and `--g-learn-rate` parameters, otherwise 0.0001 is the 
+default value for both.
+
 ### Training Progress GIFs
 An animated GIF image of the training progress will be saved in the output 
 directory each time a checkpoint is saved. Individual frames are stored in a

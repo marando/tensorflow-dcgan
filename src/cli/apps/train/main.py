@@ -16,7 +16,9 @@ def run(args: Namespace) -> None:
                       data_dir=args.data_dir,
                       name=args.name,
                       size=args.size,
-                      channels=1 if args.greyscale else 3)
+                      channels=1 if args.greyscale else 3,
+                      d_learn_rate=args.d_learn_rate,
+                      g_learn_rate=args.g_learn_rate)
 
         dcgan.train(epochs=args.epochs,
                     epochs_to_save=args.epochs_to_save,

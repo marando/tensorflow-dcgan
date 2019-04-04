@@ -15,7 +15,7 @@ def add_args(parser: ArgumentParser) -> None:
         default=EPOCHS,
         type=int,
         metavar='?',
-        help='Number of epochs to train for.'
+        help='Number of epochs to train for (default={})'.format(EPOCHS)
     )
 
     training.add_argument(
@@ -34,7 +34,7 @@ def add_args(parser: ArgumentParser) -> None:
         default=BATCH_SIZE,
         type=int,
         metavar='?',
-        help='Size of training batches.'
+        help='Size of training batches (default={})'.format(BATCH_SIZE)
     )
 
     training.add_argument(
@@ -53,6 +53,22 @@ def add_args(parser: ArgumentParser) -> None:
         action='store_true',
         help='Interpret images as greyscale before training and during '
              'generation.'
+    )
+
+    training.add_argument(
+        '--d-learn-rate',
+        default=D_LEARN_RATE,
+        type=int,
+        metavar='?',
+        help='Discriminator learning rate (default={})'.format(D_LEARN_RATE)
+    )
+
+    training.add_argument(
+        '--g-learn-rate',
+        default=G_LEARN_RATE,
+        type=int,
+        metavar='?',
+        help='Generator learning rate (default={})'.format(G_LEARN_RATE)
     )
 
     data = parser.add_argument_group(title='Data and Output Options')
